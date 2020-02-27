@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> <!-- tag head cabeçalho só vai ser configuração-->
+
+    <meta charset="UTF-8"><!--indetifica o alfabeto de ing p/ port -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--Deixa a pagina semi reponsivo ao dispotivos de tela reduzida-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><!--fromework do bootstrap estilização-->
+    <title>arquivo-liste</title><!--Titulo da pagina aparecer na aba do navegador-->
+</head>
+<body><!--serve para dar estrutura a pagina-->
+    
+
+    <div id="app"></div>
+
+   
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+
+    new Vue({
+        el: '#app', 
+        template: 
+
+        ` 
+        <div class="container"> <!--div e uma especie de caixa para organizar elementos-->
+     
+     <h1>palavras</h1><!--tag para titulo-->
+     <hr> <!--linha fina-->
+
+     <div class="form-todo form-group">
+       <p>
+           <input type="text" placeholder="Digite seu nome aqui"
+           name="author" class="form-control">
+       </p>
+        <p>
+            <textarea name="message" placeholder="comentario"
+            class="form-control " cols="30" rows="10"></textarea>
+       </p> 
+
+       <p>
+           <button type="submit" class="btn btn-primeiry">comentar</button>
+       </p>
+
+        </div>
+
+        <!--===============================-->
+
+
+        <div class="list-group">
+
+         <div class="list-group-item">
+
+             <span class="comment__author"> Autor : <strong>BOB</strong> </span>
+
+             <p>Messagem....</p>
+         <div>
+              <a href="#">Excluir</a>
+         </div>
+
+        </div>
+
+
+
+        </div>
+
+     </div>
+ <div>
+        `
+    })
+</script>
+</body>
+</html>
